@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Netflix</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cabecalho">
+            <img id="logo-netflix" src="./img/netflix.svg" alt="logo-netflix">
+            <button id="botao-entrar">Entrar</button>
+        </div>
+        <div>
+            <h1>Filmes, séries e muito mais. Sem limites.</h1>
+            <p id="paragrafo-assistar">Assista onde quiser. Cancela quando quiser</p>
+            <p id="paragrafo-pronto">Pronto para assistir ? Informe seu email ou reiniciar sua assinatura.</p>
+            <div id="formulario">
+                <input type="email" placeholder="Email">
+                <button id="botao-email">Vamos lá <img src="./img/seta.svg" alt="seta"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="rodape">
+        <h2>Perguntas frequentes</h2>
+        <button id="botao-pergunta">O que é Netflix ? <img id="imagem-pergunta" src="./img/fechar.svg" alt="x"></button>
+
+        <div id="pergunta">
+            <p class="paragrafo-pergunta">A Netflix é um serviço de transmissão online que oferece uma ampla variedade
+                de séries, filmes e
+                documentários premiados em milhares de aparelhos conectados à internet.</p>
+            <br>
+            <p class="paragrafo-pergunta">Você pode assistir a quantos filmes e séries quiser, quando e onde quiser, sem
+                comerciais – tudo por um
+                preço
+                mensal bem acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e
+                filmes.
+            </p>
+        </div>
+
+    </div>
+</body>
+<script>
+    let botao = document.getElementById("botao-pergunta")
+    let menu = document.getElementById("pergunta")
+    let image = document.getElementById("imagem-pergunta")
+
+    function acao() {
+        if (menu.style.display == "none") {
+            menu.style.display = "block"
+            image.id = "imagem-pergunta"
+        } else {
+            menu.style.display = "none"
+            image.id = "saraego"
+        }
+    }
+
+    botao.addEventListener("click", acao)
+</script>
+
+</html>
